@@ -28,3 +28,11 @@ jobs:
         run: |
           cd src
           python main.py
+
+      - name: Upload generated reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: weather-risk-reports
+          path: |
+            data/processed/
+            data/reports/
